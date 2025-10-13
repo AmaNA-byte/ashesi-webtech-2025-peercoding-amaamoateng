@@ -1,0 +1,68 @@
+
+{
+  "attendance_records": [
+    {
+      "date": "2025-10-01",
+      "course_id": "CS101",
+      "course_name": "Introduction to Computer Science",
+      "status": "Present",
+      "time_in": "09:00 AM",
+      "time_out": "10:30 AM"
+    },
+    {
+      "date": "2025-10-03",
+      "course_id": "CS101",
+      "course_name": "Introduction to Computer Science",
+      "status": "Present",
+      "time_in": "09:05 AM",
+      "time_out": "10:35 AM"
+    },
+    {
+      "date": "2025-10-08",
+      "course_id": "CS101",
+      "course_name": "Introduction to Computer Science",
+      "status": "Absent",
+      "time_in": null,
+      "time_out": null
+    },
+    {
+      "date": "2025-10-10",
+      "course_id": "CS101",
+      "course_name": "Introduction to Computer Science",
+      "status": "Present",
+      "time_in": "09:02 AM",
+      "time_out": "10:32 AM"
+    },
+    {
+      "date": "2025-10-01",
+      "course_id": "MATH201",
+      "course_name": "Linear Algebra",
+      "status": "Present",
+      "time_in": "11:00 AM",
+      "time_out": "12:30 PM"
+    },
+    {
+      "date": "2025-10-03",
+      "course_id": "MATH201",
+      "course_name": "Linear Algebra",
+      "status": "Late",
+      "time_in": "11:15 AM",
+      "time_out": "12:45 PM"
+    },
+    {
+      "date": "2025-10-08",
+      "course_id": "MATH201",
+      "course_name": "Linear Algebra",
+      "status": "Present",
+      "time_in": "11:01 AM",
+      "time_out": "12:31 PM"
+    }
+  ],
+  "attendance_summary": {
+    "total_sessions": 7,
+    "present": 5,
+    "absent": 1,
+    "late": 1,
+    "attendance_rate": 85.71
+  }
+}
