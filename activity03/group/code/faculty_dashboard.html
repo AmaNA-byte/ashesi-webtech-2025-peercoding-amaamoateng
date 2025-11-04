@@ -1,0 +1,189 @@
+<!-- Done by Ama -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Intern Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="faculty_dashboard.css">
+    <style>
+        /* Simple hover effects that don't need JS */
+        .nav-links li:hover {
+            background-color: rgba(67, 97, 238, 0.1);
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <!-- Mobile menu toggle button -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-label">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <h1>Faculty Intern Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="profile-img">
+                    <span class="profile-name">Faculty Intern</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <ul class="nav-links">
+                    <li>
+                        <a href="#" id="homeLink">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="coursesLink">
+                            <i class="fas fa-book"></i>
+                            <span>Courses</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="reportsLink">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="attendanceLink">
+                            <i class="fas fa-clipboard-check"></i>
+                            <span>Attendance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="supervisorLink">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Supervisor</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="welcome-banner">
+                <h2>Welcome back, <span id="facultyName">Faculty Intern</span>!</h2>
+                <p>Here's what's happening with your classes today.</p>
+            </div>
+            <div id="contentArea" class="content-area">
+                <!-- Course content will be loaded here by JavaScript -->
+            </div>
+            
+            <script>
+                // Get the faculty name from localStorage
+                const facultyName = localStorage.getItem('facultyName');
+                if (facultyName) {
+                    document.getElementById('facultyName').textContent = facultyName;
+                }
+            </script>
+            <script src="The_Dashboard.js"></script>
+            
+            <!-- Stats Cards -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>5</h3>
+                        <p>Active Courses</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>12</h3>
+                        <p>Pending Submissions</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>150</h3>
+                        <p>Total Students</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>2</h3>
+                        <p>Classes Today</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Activities -->
+            <div class="recent-activities">
+                <h2>Recent Activities</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p>You graded Assignment 1 for Web Technologies</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p>New submission from Dominic for Mobile App Development</p>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-calendar-plus"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p>New class scheduled for Friday, 2:00 PM - 4:00 PM</p>
+                            <span class="activity-time">Yesterday</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add the dashboard JavaScript -->
+    <script src="The_Dashboard.js"></script>
+</body>
+</html>
