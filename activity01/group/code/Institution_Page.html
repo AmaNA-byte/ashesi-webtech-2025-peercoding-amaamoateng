@@ -1,0 +1,39 @@
+<!-- Done By Edinam -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Select Institution</title>
+        <link rel="stylesheet" href="Institution_Page.css"> 
+    </head>
+    <body>
+        <div class="container">
+            <h3>Select your Institution</h3>
+
+            <form id="InstitutionList">
+                <label for="institution">Choose your institution</label>
+                <select id="instution" required>
+                     <option value="">-- Select an Institution --</option>
+                    <option value="University of Ghana">University of Ghana</option>
+                    <option value="Ashesi University">Ashesi University</option>
+                    <option value="KNUST">KNUST</option>
+                    <option value="University of Cape Coast">University of Cape Coast</option>
+                    <option value="UNER">UNER</option>
+                    <option value="UHAS">UHAS</option>
+                    <option value="Other">My institution is not listed</option>
+                </select>
+
+                <div id="signupMessage" class="hidden">
+                    <p>Your institution is not in the list.</p>
+                    <button type="button" id="signupBtn">Sign up with your institution</button>
+                </div>
+
+                <button type="submit"><a href="signin.html">Continue</a></button>    
+                    
+            </form>
+        </div>
+
+        <script src="Institution_Page.js"></script>
+    </body>
+</html>
