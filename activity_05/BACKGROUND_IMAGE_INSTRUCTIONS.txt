@@ -1,0 +1,51 @@
+================================================================================
+ASHESI CAMPUS BACKGROUND IMAGE - INSTRUCTIONS
+================================================================================
+
+TO ADD THE ASHESI CAMPUS BACKGROUND:
+
+1. Save the Ashesi campus image you want to use
+2. Name it: ashesi-campus.jpg
+3. Place it in the same folder as your PHP files:
+   activity_03/individual/code/ashesi-campus.jpg
+
+4. The background will automatically appear on all pages!
+
+================================================================================
+
+IMAGE REQUIREMENTS:
+- Format: JPG, JPEG, or PNG (if PNG, rename in styles.css line 28)
+- Recommended size: 1920x1080 or larger for best quality
+- The image will cover the entire background
+- Pages will have semi-transparent white cards on top
+
+================================================================================
+
+TO REMOVE THE BACKGROUND (if you don't want it):
+
+Open styles.css and find lines 28-32:
+
+    background-image: url('ashesi-campus.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+
+Add /* at the start and */ at the end to comment them out:
+
+    /* background-image: url('ashesi-campus.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay; */
+
+================================================================================
+
+WHERE TO FIND ASHESI IMAGES:
+- Ashesi University website
+- Ashesi social media pages
+- Take your own photo of campus
+- Use the beautiful campus photo with red flowers
+
+================================================================================
+
